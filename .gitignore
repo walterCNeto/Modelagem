@@ -1,0 +1,17 @@
+# Ignorar o ambiente virtual
+venv/
+
+# Ignorar arquivos de cache do Python
+__pycache__/
+
+# Ignorar arquivos de configuração do editor (como VSCode)
+.vscode/
+
+# Ignorar arquivos de banco de dados temporário (SQLite)
+db.sqlite3
+
+# Ignorar arquivos de migrações que serão gerados
+*/migrations/
+
+# Ignorar o arquivo de dependências
+*.pyc
