@@ -1,0 +1,38 @@
+﻿# Modelagem — estrutura por domínio
+
+Monorepo com módulos de **Crédito**, **Mercado**, **Liquidez**, **Juros** e **Econometria**.
+
+## Layout
+- \src/modelagem/\: pacote Python com submódulos por domínio
+- \
+otebooks/\: exemplos e EDA por domínio
+- \docs/\: documentação e referências
+- \	ests/\: testes (pytest)
+- \data/\: dados brutos/tratados (não versionar conteúdo sensível)
+
+## Instalação (dev)
+\\\powershell
+python -m venv .venv
+. .venv/Scripts/Activate.ps1
+pip install -r requirements.txt
+pip install -e .
+pytest
+\\\
+
+## Imports (exemplos)
+\\\python
+from modelagem.credito.merton import pd_merton
+from modelagem.mercado.curva_di import montar_curva
+from modelagem.liquidez.lcr import lcr
+from modelagem.juros.hull_white1f import simular_taxa_curta
+from modelagem.econometria.var_basic import construir_lags
+\\\
+"@ | Out-File "C:\Users\Lenovo\Desktop\Desktop\Mestrado FGV\Modelagem\README.md" -Encoding utf8
+
+# requirements.txt (básico e leve)
+@"
+numpy
+pandas
+scipy
+matplotlib
+pytest
